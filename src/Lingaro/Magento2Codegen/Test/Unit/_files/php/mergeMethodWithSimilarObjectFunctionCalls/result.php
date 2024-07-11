@@ -23,7 +23,7 @@ class Class1
     /**
      * @return $this
      */
-    public function existingSimilarFunction() : self
+    public function existingSimilarFunction(): self
     {
         $pool = $this->source->getPool();
         $pool->addToPool('pool1', $this->poolObject1);

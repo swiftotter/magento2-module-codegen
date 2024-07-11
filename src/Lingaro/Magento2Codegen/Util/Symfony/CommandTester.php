@@ -22,7 +22,6 @@ class CommandTester
     use TesterTrait;
 
     private Command $command;
-    private ArrayInput $input;
 
     public function __construct(Command $command, ArrayInput $input, StreamOutput $output)
     {

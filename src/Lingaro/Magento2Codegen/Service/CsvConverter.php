@@ -53,7 +53,12 @@ class CsvConverter
                 $fields = $trimFields ? array_map('trim', explode($delimiter, $line)) : explode($delimiter, $line);
                 return array_map(
                     function ($field) {
-                        return str_replace('!!Q!!', '"', utf8_decode(urldecode($field)));
+                        $decodedField = urldecode($field);
+                        return str_replace(
+                            '!!Q!!',
+                            '"',
+                            mb_convert_encoding($decodedField, 'UTF-8', mb_detect_encoding($decodedField))
+                        );
                     },
                     $fields
                 );

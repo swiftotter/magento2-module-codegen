@@ -36,7 +36,7 @@ class ConfigPhpMerger extends AbstractMerger implements MergerInterface
     {
         $this->phpFormatter = $phpFormatter;
         $this->arrayMergeService = $arrayMergeService;
-        $this->phpParser = (new ParserFactory())->create(ParserFactory::PREFER_PHP7);
+        $this->phpParser = (new ParserFactory())->createForNewestSupportedVersion();
     }
 
     /**

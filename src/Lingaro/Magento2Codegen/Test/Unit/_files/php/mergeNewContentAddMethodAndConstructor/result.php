@@ -22,11 +22,11 @@ class Class1
         $this->phpTester = $phpTester;
         $this->friesFryer = $friesFryer;
     }
-    public function getPhpTester() : PhpTester
+    public function getPhpTester(): PhpTester
     {
         return $this->phpTester;
     }
-    public function getFriesFryer() : FriesFryer
+    public function getFriesFryer(): FriesFryer
     {
         return $this->friesFryer;
     }

@@ -11,5 +11,4 @@ namespace Lingaro\Magento2Codegen\Exception;
 
 class ValueNotSetException extends \InvalidArgumentException
 {
-
 }

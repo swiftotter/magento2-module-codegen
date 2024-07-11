@@ -26,7 +26,7 @@ class PhpMerger extends AbstractMerger implements MergerInterface
 
     public function __construct(NodeTreeFactory $nodeTreeFactory)
     {
-        $this->parser = (new ParserFactory())->create(ParserFactory::PREFER_PHP7);
+        $this->parser = (new ParserFactory())->createForNewestSupportedVersion();
         $this->printer = new PrettyPrinter\Standard();
         $this->wrapper = new NodeWrapper();
         $this->treeFactory = $nodeTreeFactory;

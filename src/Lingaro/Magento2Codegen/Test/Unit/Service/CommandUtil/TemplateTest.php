@@ -62,6 +62,8 @@ class TemplateTest extends TestCase
      */
     private $propertyDependencyChecker;
 
+    private MockObject|PropertyCollector $propertyCollectorMock;
+
     public function setUp(): void
     {
         $this->propertyBagFactoryMock = $this->getMockBuilder(PropertyBagFactory::class)
